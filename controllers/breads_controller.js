@@ -3,7 +3,9 @@ const breads = express.Router()
 const Bread = require('../models/bread.js')
 
 breads.get('/', (req, res)=> {
-    res.send(Bread)
+    res.render('Index', {
+        breads: Bread
+    })
 })
 
 // http://localhost:3003/breads/1
